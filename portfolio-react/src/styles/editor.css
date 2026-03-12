@@ -1,0 +1,178 @@
+/* Editor.js Tailwind-styled container */
+.ce-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Editor wrapper */
+.codex-editor {
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.codex-editor--empty .ce-paragraph {
+  color: #9ca3af;
+}
+
+/* Paragraph styling */
+.ce-paragraph {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.ce-paragraph a {
+  color: #3b82f6;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.ce-paragraph a:hover {
+  color: #1d4ed8;
+}
+
+/* Header styling */
+.ce-header {
+  margin: 1.5rem 0 1rem 0;
+  padding: 0;
+  border: none;
+  font-weight: 700;
+  color: #111827;
+}
+
+.ce-header--h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.ce-header--h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.ce-header--h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.ce-header--h4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+/* List styling */
+.ce-list {
+  margin-bottom: 1.5rem;
+}
+
+.ce-list__item {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #4b5563;
+  margin-bottom: 0.75rem;
+}
+
+.ce-list--unordered .ce-list__item::before {
+  background-color: #3b82f6;
+}
+
+.ce-list--ordered {
+  padding-left: 2rem;
+}
+
+/* Code block styling */
+.ce-code {
+  background-color: #1f2937;
+  color: #e5e7eb;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* Block selection */
+.codex-editor .ce-block--selected {
+  background-color: transparent;
+}
+
+/* Toolbox styling */
+.ce-toolbox {
+  display: none;
+}
+
+.ce-toolbox__plus {
+  color: #3b82f6;
+}
+
+.ce-toolbox__plus:hover {
+  color: #1d4ed8;
+  background-color: #f0f4ff;
+}
+
+/* Delete button styling */
+.ce-popover__item button {
+  color: #4b5563;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.ce-popover__item button:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+/* Inline tools */
+.ce-inline-toolbar {
+  background-color: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ce-inline-toolbar__button {
+  color: #e5e7eb;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ce-inline-toolbar__button:hover {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.ce-inline-toolbar__button.ce-inline-toolbar__button--active {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .ce-paragraph {
+    font-size: 1rem;
+  }
+
+  .ce-header--h1 {
+    font-size: 1.875rem;
+  }
+
+  .ce-header--h2 {
+    font-size: 1.5rem;
+  }
+
+  .ce-header--h3 {
+    font-size: 1.25rem;
+  }
+
+  .ce-list__item {
+    font-size: 1rem;
+  }
+}

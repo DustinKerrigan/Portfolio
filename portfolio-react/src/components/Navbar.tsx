@@ -9,7 +9,6 @@ const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     
     const navItems: NavItem[] = [
-        { label: 'Home', href: '#hero' },
         { label: 'About', href: '#about' },
         { label: 'Projects', href: '#projects' },
         { label: 'Contact', href: '#contact' }

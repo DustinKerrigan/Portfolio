@@ -1,9 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Editor from './Editor';
 
-
-
+interface EditorData {
+  blocks: any[];
+  version: string;
+  time: number;
+}
 
 const About: React.FC = () => {
+  const [editorData, setEditorData] = useState<EditorData | null>(null);
+
+  const handleEditorSave = (data: EditorData) => {
+    setEditorData(data);
+    console.log('Editor data saved:', data);
+  };
+
+  const aboutParagraph = {
+    blocks: [
+      {
+        type: 'paragraph',
+        data: {
+          text: "Hello, my name is Dustin Kerrigan and I graduated from the University of North Florida in August 2025 with a Bachelor's degree in Computer Science.",
+        },
+      },
+      {
+        type: 'paragraph',
+        data: {
+          text: 'Here, you can see my track record as a developer. My school, internship, and personal projects can be found below.',
+        },
+      },
+    ],
+  };
+
   return (
     <section id="about" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,14 +42,13 @@ const About: React.FC = () => {
           <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full mb-8"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Hey, my name is Dustin Kerrigan and I graduated from the University of North Florida
-              in August 2025 with a Bachelor's degree in Computer Science. Here, you can see my track record as a developer.
-              My school, internship, and personal projects can be found below. 
-            </p>
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          <div className="w-full">
+            <Editor
+              initialData={aboutParagraph}
+              onSave={handleEditorSave}
+              readOnly={true}
+            />
           </div>
 
           <div className="relative">
