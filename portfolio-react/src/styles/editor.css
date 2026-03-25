@@ -1,7 +1,18 @@
 /* Editor.js Tailwind-styled container */
+.card-style {
+  /* Min 1rem, Ideal 2vw + 1rem, Max 1.5rem */
+  font-size: clamp(1rem, 2vw + 1rem, 1.5rem);
+  line-height: 1.6;
+  text-wrap: pretty; /* Prevents single words on last line */
+}
+
+.card-style:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
 .ce-container {
   max-width: 100%;
   margin: 0 auto;
+  width: fit-content;
 }
 
 /* Editor wrapper */

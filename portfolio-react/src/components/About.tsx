@@ -20,13 +20,7 @@ const About: React.FC = () => {
       {
         type: 'paragraph',
         data: {
-          text: "Hello, my name is Dustin Kerrigan and I graduated from the University of North Florida in August 2025 with a Bachelor's degree in Computer Science.",
-        },
-      },
-      {
-        type: 'paragraph',
-        data: {
-          text: 'Here, you can see my track record as a developer. My school, internship, and personal projects can be found below.',
+          text: "Hello, I'm Dustin Kerrigan, a Computer Science graduate from the University of North Florida (August 2025). Below you'll find my track record as a developer through school, internship, and personal projects.",
         },
       },
     ],
@@ -44,11 +38,13 @@ const About: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div className="w-full">
+            <div className ="card-style">
             <Editor
               initialData={aboutParagraph}
               onSave={handleEditorSave}
               readOnly={true}
             />
+            </div>
           </div>
 
           <div className="relative">
